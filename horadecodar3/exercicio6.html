@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+       const alunos = {
+        aprovados: 0,
+        reprovados: 0,
+    } 
+
+    const CalcularMediaAluno = () => {
+        const numero1 = parseFloat(prompt("Qual é a primeira nota?"))
+        const numero2 = parseFloat(prompt("Qual é a segunda nota?"))
+        const media = (numero1 + numero2) / 2
+
+        let resposta
+
+        if(media > 9.5) {
+            alunos.aprovados++
+            alert(`O aluno foi aprovado [ ${media} ]`)
+            resposta = prompt("Calcular a média de outro aluno Sim/Não?")
+        } else {
+            alunos.reprovados++
+            alert(`O aluno foi reprovado [ ${media} ]`)
+            resposta = prompt("Calcular a média de outro aluno Sim/Não?")
+        }
+
+        if(resposta.toLowerCase() == "sim" || resposta.toLowerCase() == "s") CalcularMediaAluno()
+        else {
+            alert(`${alunos.aprovados} foram aprovados e ${alunos.reprovados} foram reprovados, total: ${alunos.aprovados + alunos.reprovados}`)
+        }
+    }
+    
+    CalcularMediaAluno()
+       
+    </script>
+</body>
+</html>

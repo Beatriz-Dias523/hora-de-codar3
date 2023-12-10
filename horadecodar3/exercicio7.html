@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      
+      const palavras = ["primeira", "segunda", "terceira", "quarta", "quinta", "sexta"]
+    let somaNotas = 0
+
+    for(let i = 0; i < palavras.length; i) {
+            let valor = parseFloat(prompt(`Qual foi a nota do aluno na ${palavras[i]} avaliação?`))
+            if(valor < 0 || valor > 10) alert("Por favor insira um valor válido de 0 a 10")
+            else {
+                somaNotas += valor
+                i++ 
+            }
+    
+    
+    alert(`A média do aluno foi de ${somaNotas / 6}`)
+}
+       
+    </script>
+</body>
+</html>

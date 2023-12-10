@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+
+         const numero1 = parseInt(prompt("Qual é o primeiro valor?"))
+    const numero2 = parseInt(prompt("Qual é o segundo valor?"))
+    const numeros_decrescente = []
+
+    const media = (numero1 + numero2) / 2
+
+    let maiorNumero = numero1 > numero2 ? numero1 : numero2;
+    let menorNumero = numero1 < numero2 ? numero1 : numero2;
+
+    
+    for(let i = menorNumero; i <= maiorNumero; i++) {
+        numeros_decrescente.push(i)
+    }
+
+    alert(`${numeros_decrescente.join(',')} a média é ${media}`)
+       
+    </script>
+</body>
+</html>
